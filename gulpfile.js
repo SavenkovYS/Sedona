@@ -15,13 +15,12 @@ var del = require("del");
 var server = require("browser-sync").create();
 
 gulp.task("style", function() {
-  return gulp.src("source/less/**/*.less")
+  return gulp.src("source/less/style.less")
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(concat("style.css"))
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
