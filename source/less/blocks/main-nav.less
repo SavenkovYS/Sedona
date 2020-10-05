@@ -87,3 +87,21 @@
         display: block;
     }
 }
+
+@media(min-width: @width-tbl) {
+    .main-nav {
+        margin-bottom: 0;
+
+    &__logo-link {
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        transform: translate(-50%);
+    }
+
+    &__button {
+        display: none;
+    }
+    }
+}

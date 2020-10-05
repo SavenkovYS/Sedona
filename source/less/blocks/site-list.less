@@ -33,3 +33,34 @@
         text-decoration: none;
     }
 }
+
+@media (min-width: @width-tbl) {
+    .site-list {
+        display: flex;
+        justify-content: space-between;
+
+        padding: 20px 0;
+
+        color: @clr-dark;
+        text-align: center;
+
+        background-color: @clr-light;
+
+        &__item {
+            width: 20%;
+
+            border-top: none;
+            border-bottom: none;
+        }
+
+        &__item:nth-child(2) {
+            margin-right: 20%;
+        }
+
+        &__link {
+            display: inline-block;
+
+            padding: 0;
+        }
+    }
+}
