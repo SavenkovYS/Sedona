@@ -5,10 +5,6 @@
 
     margin-bottom: 55px;
 
-    font-size: var(--fs-nav);
-    line-height: @lh-primary;
-    font-weight: @fw-bold;
-
     &__logo-link {
         position: absolute;
         bottom: 0;
@@ -19,7 +15,7 @@
 
     &__button {
         position: absolute;
-        top: 17px;
+        top: 15px;
         right: 20px;
         
         width: 30px;
@@ -36,6 +32,22 @@
         display: none;
     }
 
+    &__button--open::before {
+        content: '';
+
+        position: absolute;
+        top: 5px;
+        left: 3px;
+
+        width: 24px;
+        height: 4px;
+
+        background-color: @clr-accent;
+
+        box-shadow: 0 8px @clr-accent,
+                    0 16px @clr-accent;
+    }
+
     &__button--close::before,
     &__button--close::after {
         content: '';
@@ -47,7 +59,7 @@
         width: 28px;
         height: 4px;
 
-        background-color: red;
+        background-color: @clr-light;
     }
 
     &__button--close::before {  
