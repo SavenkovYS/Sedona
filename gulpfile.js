@@ -79,6 +79,12 @@ gulp.task("html:copy", function() {
      .pipe(gulp.dest("build"));
 });
 
+gulp.task("js:copy", function() {
+  return gulp.src("source/**/*.js")
+    .pipe(gulp.dest("build/js"));
+});
+
+
 gulp.task("clean", function () {
   return del("build");
 });
@@ -96,6 +102,7 @@ gulp.task("browserSync", function(done) {
 gulp.task("serve", function() {
   gulp.watch("source/less/**/*.less", gulp.series("style"));
   gulp.watch("source/*.html").on("change", gulp.series("html:copy", server.reload));
+  gulp.watch("source/**/*.js").on("change", gulp.series("js:copy", server.reload));
 });
 
 
