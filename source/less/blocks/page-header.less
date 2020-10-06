@@ -1,0 +1,41 @@
+.page-header {
+    &::after {
+        content: '';
+
+        display: block;
+
+        width: 100%;
+        height: 390px;
+
+        background-image: url('../img/header-maintext-mobile.svg'),
+                          url('../img/header-triangle.svg'),
+                          url(../img/back-mobile.jpg);
+        background-size: auto, cover, cover;
+        background-repeat: no-repeat;
+        background-position: center, bottom, top;
+    }
+}
+
+@media(min-width: @width-tbl) {
+    .page-header {
+        &::after {
+            height: 518px;
+    
+            background-image: url('../img/header-maintext-tablet.svg'),
+                              url('../img/header-triangle.svg'),
+                              url(../img/back-tablet.jpg);
+            
+            background-size: auto, 102%, cover;
+        }
+    }
+}
+
+@media(min-width: @width-dsk) {
+    .page-header {
+        &::after {
+            background-image: url('../img/header-maintext-tablet.svg'),
+                              url('../img/header-triangle.svg'),
+                              url(../img/back-desktop.jpg);
+        }
+    }
+}
