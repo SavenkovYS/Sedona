@@ -1,26 +1,29 @@
 .advantage {
 
-    &--secondary {
-        padding: 0 20px;
-
-        background-color: #eeeeee;
-        border-bottom: 1px solid @br-clr-primary;
-    }
-
-    &--secondary:last-child {
-        border-bottom: none;
-    }
+    
 
     &__title {
+        margin-bottom: 10px;
+
         font-size: var(--fs-h2);
         font-weight: @fw-bold;
     }
 
+    &__number {
+        display: inline-block;
+
+        margin-bottom: 15px;
+    }
+
     &__header {
-        padding: 0 20px;
+        padding: 40px 20px;
 
         color: @clr-light;
         background-color: @clr-accent;
+    }
+
+    &--town header {
+        padding-top: 70px;
     }
 
     &__image-container {
@@ -33,9 +36,29 @@
         object-fit: cover;
         object-position: center;
     }
+    
+    &--town {
+        position: relative;
+    }
+
+    &--town::before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 37px;
+
+        background-image: url(../img/advantage-triangle.svg);
+        background-position: center top -2px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
     &__list {
-        padding: 0 20px;
+        padding: 35px 20px;
 
         text-align: left;
     }
@@ -43,12 +66,29 @@
     &__item {
         position: relative;
 
+        margin-bottom: 30px;
         padding-left: 50px;
     }
 
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+
     &__item-title {
+        margin-bottom: 15px;
         font-size: var(--fs-h3);
         font-weight: @fw-bold;
+    }
+
+    &--secondary {
+        padding: 25px 20px 30px;
+
+        background-color: #eeeeee;
+        border-bottom: 1px solid @br-clr-primary;
+    }
+
+    &--secondary:last-child {
+        border-bottom: none;
     }
 
     &__item--accommodation::before,
@@ -67,14 +107,20 @@
     }
 
     &__item--accommodation::before {
+        top: -8px;
+
         background-image: url(../img/advantage-icon-1.svg);
     }
 
     &__item--souvenirs::before {
+        top: -11px;
+        left: 2px;
+
         background-image: url(../img/advantage-icon-2.svg);
     }
 
     &__item--food::before {
+        left: 0;
         background-image: url(../img/advantage-icon-3.svg);
     }
 
@@ -86,8 +132,19 @@
         &--town {
             display: grid;
             grid-template-areas:
-                "picture text text"
-                "adv     adv  adv";
+                "text picture picture"
+                "adv  adv     adv";
+        }
+
+        &--town::before {
+            background-image: none;
+        }
+
+        &--bridge {
+            display: grid;
+            grid-template-areas:
+                "picture picture text"
+                "adv     adv     adv";
         }
     
         &__image-container {
