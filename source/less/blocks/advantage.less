@@ -1,6 +1,22 @@
-.advantage {
+.advantage { 
 
-    
+    &__header {
+        padding: 40px 20px;
+
+        color: @clr-light;
+        background-color: @clr-accent;
+    }
+
+    &__image-container {
+        width: 100%;        
+    }
+
+    &__image {
+        width: 100%;
+        height: 260px;  
+        object-fit: cover;
+        object-position: center;
+    }
 
     &__title {
         margin-bottom: 10px;
@@ -15,31 +31,13 @@
 
         margin-bottom: 15px;
     }
-
-    &__header {
-        padding: 40px 20px;
-
-        color: @clr-light;
-        background-color: @clr-accent;
+    
+    &--town {
+        position: relative;
     }
 
     &--town header {
         padding-top: 70px;
-    }
-
-    &__image-container {
-        width: 100%;        
-    }
-
-    &__image {
-        width: 100%;
-        height: 260px;  
-        object-fit: cover;
-        object-position: center;
-    }
-    
-    &--town {
-        position: relative;
     }
 
     &--town::before {
@@ -81,17 +79,6 @@
         font-weight: @fw-bold;
     }
 
-    &--secondary {
-        padding: 25px 20px 30px;
-
-        background-color: #eeeeee;
-        border-bottom: 1px solid @br-clr-primary;
-    }
-
-    &--secondary:last-child {
-        border-bottom: none;
-    }
-
     &__item--accommodation::before,
     &__item--souvenirs::before,
     &__item--food::before {
@@ -125,11 +112,46 @@
         background-image: url(../img/advantage-icon-3.svg);
     }
 
-    
+    &--secondary {
+        padding: 25px 20px 30px;
+
+        background-color: #eeeeee;
+        border-bottom: 1px solid @br-clr-primary;
+    }
+
+    &--secondary:last-child {
+        border-bottom: none;
+    }
 }
 
 @media(min-width: @width-tbl) {
     .advantage {
+
+        &__image-container {
+            grid-area: picture;
+        }
+    
+        &__header {
+            grid-area: text;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding: 10px 20px;
+        }
+
+        &__title {
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__number {
+            display: inline-block;
+    
+            margin-bottom: 20px;
+        }
 
         &--main {
             grid-template-columns: 1fr 1fr 1fr;
@@ -152,44 +174,92 @@
                 "picture picture text"
                 "adv     adv     adv";
         }
-    
-        &__image-container {
-            grid-area: picture;
-        }
-    
-        &__header {
-            grid-area: text;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            padding: 10px 20px;
-        }
-
+       
         &--town header {
             padding-top: 0;
-        }
+        }   
 
-        &__number {
-            display: inline-block;
-    
-            margin-bottom: 20px;
-        }
-
-        &__image-container {
-            max-height: 280px;
-        }
-    
-        &__image {
-           height: 100%;
-           max-height: 280px;
-        }
-    
         &__list {
+            grid-area: adv;
+
             display: flex;
             justify-content: space-between;
-            grid-area: adv;
+
+            padding: 60px 0;
+            
+            text-align: center;
+        }
+
+        &__item {
+            margin-bottom: 0;
+            padding: 100px 50px 0;
+        }
+
+        &__item--accommodation {
+            order: 1;
+        }
+
+        &__item--souvenirs {
+            order: 3;
+        }
+
+        &__item--food {
+            order: 2;
+        }
+    
+        &__item--accommodation::before,
+        &__item--souvenirs::before,
+        &__item--food::before {
+            content: '';
+    
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+    
+            width: 80px;
+            height: 75px;
+    
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+    
+        &__item--accommodation::before {
+            top: 0;
+
+            background-image: url(../img/advantage-icon-1.svg);
+            background-size: 75px 72px;
+        }
+    
+        &__item--souvenirs::before {
+            top: 0;
+            left: inherit;
+
+            background-image: url(../img/advantage-icon-2.svg);
+            background-size: 64px 75px;
+        }
+    
+        &__item--food::before {
+            left: inherit;
+
+            background-image: url(../img/advantage-icon-3.svg);
+            background-size: 77px 68px;
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        &--secondary &__title {
+            width: 150px;
+        }
+
+        &--secondary {
+            padding: 45px 60px;
+    
+            border-bottom: none;
         }
     }
 }
