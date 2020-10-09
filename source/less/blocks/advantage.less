@@ -1,10 +1,14 @@
 .advantage { 
-
+  
     &__header {
         padding: 40px 20px;
 
         color: @clr-light;
         background-color: @clr-accent;
+    }
+
+    &__header--town {
+        padding-top: 70px;
     }
 
     &__image-container {
@@ -34,10 +38,6 @@
     
     &--town {
         position: relative;
-    }
-
-    &--town header {
-        padding-top: 70px;
     }
 
     &--town::before {
@@ -130,6 +130,10 @@
         &__image-container {
             grid-area: picture;
         }
+
+        &__header--town {
+            padding-top: 0;
+        } 
     
         &__header {
             grid-area: text;
@@ -138,7 +142,7 @@
             flex-direction: column;
             justify-content: center;
 
-            padding: 10px 20px;
+            padding: 20px 20px;
         }
 
         &__title {
@@ -175,10 +179,6 @@
                 "adv     adv     adv";
         }
        
-        &--town header {
-            padding-top: 0;
-        }   
-
         &__list {
             grid-area: adv;
 
@@ -244,13 +244,7 @@
 
             background-image: url(../img/advantage-icon-3.svg);
             background-size: 77px 68px;
-        }
-
-        &__wrapper {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-        }
+        }     
 
         &--secondary &__title {
             width: 150px;
@@ -260,6 +254,27 @@
             padding: 45px 60px;
     
             border-bottom: none;
+        }
+    }
+}
+
+@media(min-width: @width-dsk) {
+    .advantage {
+
+        &__header {
+            padding: 30px 60px;
+        }     
+
+        &__list {
+            padding: 60px 0 80px;
+        }
+
+        &__item {
+            padding: 100px 70px 0;
+        }
+
+        &--secondary {
+            padding: 40px 55px 60px;
         }
     }
 }
