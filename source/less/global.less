@@ -68,6 +68,28 @@ body {
   background-color: @clr-accent;
 }
 
+// Состояния кнопок 
+
+.button:focus {
+  outline: 5px solid @clr-accent;
+  outline-offset: 10px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: @clr-bg-hvr;
+}
+
+.button:active {
+  background-color: @clr-bg-act;
+
+  color: @clr-light-act;
+}
+
+.button:disabled {
+  background-color: @clr-bg-disabled;
+}
+
 // Сброс настроек по умолчанию
 
 *,
