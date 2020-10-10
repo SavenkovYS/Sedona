@@ -1,14 +1,12 @@
 .advantage { 
+
+// Общие стили 
   
     &__header {
         padding: 40px 20px;
 
         color: @clr-light;
         background-color: @clr-accent;
-    }
-
-    &__header--town {
-        padding-top: 70px;
     }
 
     &__image-container {
@@ -35,6 +33,12 @@
 
         margin-bottom: 15px;
     }
+
+// Фоновый треугольник шапки первой особенности
+
+    &__header--town {
+        padding-top: 70px;
+    }
     
     &--town {
         position: relative;
@@ -55,6 +59,8 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
+
+// Список первой особенности
 
     &__list {
         padding: 35px 20px;
@@ -78,6 +84,8 @@
         font-size: var(--fs-h3);
         font-weight: @fw-bold;
     }
+
+// Иконки к списку первой особенности
 
     &__item--accommodation::before,
     &__item--souvenirs::before,
@@ -112,28 +120,42 @@
         background-image: url(../img/advantage-icon-3.svg);
     }
 
-    &--secondary {
-        padding: 25px 20px 30px;
+// Вторичные особенности
 
-        background-color: #eeeeee;
-        border-bottom: 1px solid @br-clr-primary;
+    &--secondary {
+        background-color: #eeeeee;       
     }
 
-    &--secondary:last-child {
+    &--secondary:last-child &__wrapper {
         border-bottom: none;
+    }
+
+    &__wrapper {
+        width: 85%;
+        margin: 0 auto;
+        padding: 25px 0 30px;
+        border-bottom: 1px solid @br-clr-primary;
     }
 }
 
 @media(min-width: @width-tbl) {
     .advantage {
 
-        &__image-container {
-            grid-area: picture;
-        }
+// Убираем треугольник с шапки первой особенности
 
         &__header--town {
             padding-top: 0;
         } 
+
+        &--town::before {
+            background-image: none;
+        }
+
+// Общие стили
+
+        &__image-container {
+            grid-area: picture;
+        }        
     
         &__header {
             grid-area: text;
@@ -157,6 +179,8 @@
             margin-bottom: 20px;
         }
 
+// Основные особенности 
+
         &--main {
             grid-template-columns: 1fr 1fr 1fr;
         }
@@ -166,11 +190,7 @@
             grid-template-areas:
                 "text picture picture"
                 "adv  adv     adv";
-        }
-
-        &--town::before {
-            background-image: none;
-        }
+        }      
 
         &--bridge {
             display: grid;
@@ -178,6 +198,8 @@
                 "picture picture text"
                 "adv     adv     adv";
         }
+
+// Список первой особенности 
        
         &__list {
             grid-area: adv;
@@ -206,6 +228,8 @@
         &__item--food {
             order: 2;
         }
+
+// Иконки к списку первой особенности 
     
         &__item--accommodation::before,
         &__item--souvenirs::before,
@@ -244,7 +268,9 @@
 
             background-image: url(../img/advantage-icon-3.svg);
             background-size: 77px 68px;
-        }     
+        }   
+        
+// Вторичные особенности
 
         &--secondary &__title {
             width: 150px;
@@ -252,7 +278,11 @@
 
         &--secondary {
             padding: 45px 60px;
-    
+        }
+
+        &__wrapper {
+            width: 100%;
+
             border-bottom: none;
         }
     }
