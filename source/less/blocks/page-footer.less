@@ -1,0 +1,27 @@
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 35px 20px 30px;
+
+    &__hashtag {
+        margin-bottom: 35px;
+
+        font-size: 1.3125rem;
+        font-weight: @fw-bold;
+    }
+}
+
+@media(min-width: @width-tbl) {
+    .page-footer {
+        flex-direction: row;
+        justify-content: space-between;
+
+        padding: 35px 60px;
+
+        &__hashtag {
+            margin-bottom: 0;
+        }
+    }
+}
