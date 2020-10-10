@@ -6,6 +6,7 @@
     --fs-h3: 1.125rem;
     --fs-nav: 1.125rem;
     --fs-body: 0.875rem;
+    --fs-btn: 1.3125rem;
 }
 
 @media (min-width: 768px) {
@@ -50,6 +51,24 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
+
+// Кнопки 
+
+.button {
+  display: inline-block;
+
+  padding: 15px 35px;
+
+  font-size: var(--fs-btn);
+  font-weight: @fw-bold;
+  color: @clr-light;
+  letter-spacing: 1px;
+  text-decoration: none;
+
+  background-color: @clr-accent;
+}
+
+// Сброс настроек по умолчанию
 
 *,
 *::before,

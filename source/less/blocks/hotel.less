@@ -1,0 +1,38 @@
+.hotel {
+    padding: 30px 20px 50px;
+    text-align: center;
+
+    &__title {
+        margin-bottom: 25px;
+
+        font-size: var(--fs-h2);
+        font-weight: @fw-bold;
+    }
+
+    &__button,
+    &__text {
+        width: 80%;
+    }
+
+    &__text {
+        margin: 0 auto 40px;
+    }   
+}
+
+@media(min-width: @width-tbl) {
+    .hotel {
+        padding: 40px 40px 55px;
+
+        &__text,
+        &__button {
+            width: 60%;
+            max-width: 550px;
+        }
+    }
+}
+
+@media (min-width: @width-dsk) {
+    .hotel {
+        padding: 45px 55px 65px;
+    }
+}
