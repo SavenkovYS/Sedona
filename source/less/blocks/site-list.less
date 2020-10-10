@@ -11,7 +11,7 @@
 
     &__item {
         border-bottom: 1px solid @br-clr-primary;
-        border-top: 1px solid @br-clr-secondary;
+        box-shadow: inset 0 1px @br-clr-secondary;
     }
 
     &__item:first-child {
@@ -30,6 +30,19 @@
         color: inherit;
 
         text-decoration: none;
+    }
+
+// Сосояние кнопок меню
+
+    &__link:hover,
+    &__link:focus {
+        background-color: @clr-bg-hvr;
+    }
+
+    &__link:active {
+        color: @clr-light-act;
+
+        background-color: @clr-bg-act;
     }
 }
 
@@ -60,6 +73,38 @@
             display: inline-block;
 
             padding: 0;
+        }
+
+        &__link--active {
+            color: #766357;
+        }
+
+// Сосояние кнопок меню
+
+        &__link:hover,
+        &__link:focus {
+            color: @clr-accent;
+
+            background-color: transparent;
+        }
+
+        &__link:focus {
+            outline: 3px solid @clr-accent
+        }
+
+        &__link:active {
+            color: @clr-dark-act;
+
+            background-color: transparent;        
+        }
+
+        &__link--active:hover,
+        &__link--active:focus {
+            color: #604e43;
+        }
+
+        &__link--active:active {
+            color: rgba(118, 99, 87, 0.3);       
         }
     }
 }

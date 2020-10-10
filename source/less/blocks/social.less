@@ -16,6 +16,26 @@
 
         background-color: @clr-accent;
     }
+
+// Состояния ссылок
+
+    &__link:hover,
+    &__link:focus {
+        background-color: @clr-bg-hvr;
+    }
+
+    &__link:focus {
+        outline: 5px solid @clr-accent;
+        outline-offset: 5px;
+    }
+
+    &__link:active {
+        background-color: @clr-bg-act;
+    }
+
+    &__link:active svg {
+        opacity: 0.3;
+    }
 }
 
 @media(min-width: @width-tbl) {
