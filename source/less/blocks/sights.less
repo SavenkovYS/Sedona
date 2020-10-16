@@ -1,0 +1,74 @@
+.sights {
+    padding: 0 20px 40px;
+
+    border: none;
+    border-bottom: 1px solid @br-clr-primary;
+
+    &__title {
+        font-size: var(--fs-h3);
+        font-weight: @fw-bold;
+        text-align: center;
+
+        display: table;
+        padding: 20px 0 35px; 
+    }
+
+    &__item {
+        margin-bottom: 45px;
+        padding-left: 75px;
+    }
+
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+
+    &__label {
+        position: relative;
+    
+        font-size: 1.125rem;
+        font-weight: @fw-bold;
+        text-transform: none;
+      }
+    
+      & input + label::before {
+        content: '';
+    
+        position: absolute;
+        top: -15px;
+        left: -76px;
+    
+        width: 56px;
+        height: 56px;
+    
+        background-color: #f2f2f2;
+        border-radius: 5px
+      } 
+    
+      & input:checked + label::after {
+        content: '';
+    
+        position: absolute;
+        top: 3px;
+        left: -58px;
+    
+        width: 21px;
+        height: 13px;
+    
+        border-left: 3px solid #333333;
+        border-bottom: 3px solid #333333;
+        transform: rotate(-45deg);
+      }
+
+      & input:hover + label::before,
+      & input:focus + label::before {
+        background-color: #e5e5e5;
+      }
+    
+      & input:active + label::before {
+        background-color: #d5d5d5;
+      }
+    
+      & input:active:checked + label::after {
+        border-color: rgba(51, 51, 51, 0.3);
+      }
+}

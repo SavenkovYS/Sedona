@@ -1,0 +1,36 @@
+.fullname {
+    padding: 0 20px 25px;
+
+    border: none;
+    border-bottom: 1px solid @br-clr-primary;
+
+    &__title {
+        font-size: var(--fs-h3);
+        font-weight: @fw-bold;
+        text-align: center;
+
+        display: table;
+        padding: 20px 0;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 20px;
+    }
+
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+
+    &__label {
+        margin-right: 15px;
+
+        color: #333333;
+    }
+
+    &__field {
+        flex-grow: 1;
+    }
+}

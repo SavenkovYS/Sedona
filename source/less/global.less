@@ -93,6 +93,49 @@ body {
   background-color: @clr-bg-disabled;
 }
 
+// Поля формы 
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  border: none;
+  padding: 18px 22px;
+
+  font-size: 1.125rem;
+  color: black;
+
+  background-color: #f2f2f2;
+}
+
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  font-family: @ff-primary;
+  color: @clr-dark;
+  font-weight: @fw-bold;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder { /* Firefox 18- */
+  font-family: @ff-primary;
+  color: @clr-dark;
+  font-weight: @fw-bold;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {  /* Firefox 19+ */
+  font-family: @ff-primary;
+  color: @clr-dark;
+  font-weight: @fw-bold;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {  
+  font-family: @ff-primary;
+  color: @clr-dark;
+  font-weight: @fw-bold;
+}
+
 // Сброс настроек по умолчанию
 
 *,
@@ -110,6 +153,12 @@ h5,
 h6,
 figure {
   margin: 0;
+}
+
+fieldset,
+legend {
+  margin: 0;
+  padding: 0;
 }
 
 ul,
