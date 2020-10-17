@@ -82,3 +82,45 @@
         }
     }
 }
+
+@media(min-width: @width-dsk) {
+    .user-contacts {
+
+        &__title {
+            margin-bottom: 70px;
+        }
+
+        &__list {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__item {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            margin-bottom: 0;
+        }
+
+        &__item--phone {
+            margin-right: 80px;
+        }
+
+        &__label {
+            white-space: nowrap;
+            margin-right: 15px;
+            margin-bottom: 0;
+            padding-left: 0;
+        }
+
+        &__label span {
+            display: none;
+        }
+
+        &__field {
+            width: 315px;
+        }
+
+    }
+}

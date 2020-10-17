@@ -99,12 +99,24 @@
 
     &__item {
         width: 50%;
+        margin-bottom: 65px;
         padding-left: 75px;
     }
 
     &__item:last-child,
     &__item:nth-last-child(2) {
         margin-bottom: 0;
+    }
+  }
+}
+
+@media(min-width: @width-dsk) {
+  .sights {
+
+    &__item {
+        width: 20%;
+        margin-bottom: 0;
+        padding-left: 0;
     }
   }
 }
