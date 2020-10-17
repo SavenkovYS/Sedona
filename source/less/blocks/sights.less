@@ -8,6 +8,7 @@
         font-size: var(--fs-h3);
         font-weight: @fw-bold;
         text-align: center;
+        line-height: @lh-secondary;
 
         display: table;
         padding: 20px 0 35px; 
@@ -15,7 +16,6 @@
 
     &__item {
         margin-bottom: 45px;
-        padding-left: 75px;
     }
 
     &__item:last-child {
@@ -24,6 +24,8 @@
 
     &__label {
         position: relative;
+
+        padding-left: 75px;
     
         font-size: 1.125rem;
         font-weight: @fw-bold;
@@ -35,7 +37,7 @@
     
         position: absolute;
         top: -15px;
-        left: -76px;
+        left: -1px;
     
         width: 56px;
         height: 56px;
@@ -49,7 +51,7 @@
     
         position: absolute;
         top: 3px;
-        left: -58px;
+        left: 17px;
     
         width: 21px;
         height: 13px;
@@ -71,4 +73,38 @@
       & input:active:checked + label::after {
         border-color: rgba(51, 51, 51, 0.3);
       }
+}
+
+@media(min-width: @width-tbl) {
+  .sights {
+    margin-top: 50px;
+    padding: 0;
+
+    border-bottom: none;
+    border-top: 1px solid @br-clr-primary;
+
+    &__title {
+        width: 50%;
+        margin-bottom: 55px;
+        padding: 0 60px; 
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        width: 100%;
+    }
+
+    &__item {
+        width: 50%;
+        padding-left: 75px;
+    }
+
+    &__item:last-child,
+    &__item:nth-last-child(2) {
+        margin-bottom: 0;
+    }
+  }
 }

@@ -6,6 +6,7 @@
     &__title {
         font-size: var(--fs-h3);
         font-weight: @fw-bold;
+        line-height: @lh-secondary;
         text-align: center;
 
         display: table;
@@ -18,5 +19,20 @@
         padding: 15px;
 
         font-size: 1.125rem;
+    }
+}
+
+@media(min-width: @width-tbl) {
+    .comment {
+        padding: 0;
+        margin-top: 80px;
+    
+        border: none;
+        border-top: 1px solid @br-clr-primary;
+    
+        &__title {
+            margin-bottom: 55px;
+            padding: 0 60px;
+        }
     }
 }

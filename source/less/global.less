@@ -60,7 +60,8 @@ body {
   display: inline-block;
 
   padding: 15px 35px;
-
+  
+  font-family: @ff-primary;
   font-size: var(--fs-btn);
   font-weight: @fw-bold;
   color: @clr-light;
@@ -100,6 +101,7 @@ input[type="tel"],
 input[type="email"] {
   border: none;
   padding: 18px 22px;
+  width: 100%;
 
   font-size: 1.125rem;
   color: black;
@@ -107,6 +109,7 @@ input[type="email"] {
   background-color: #f2f2f2;
 }
 
+// Placeholders
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
@@ -116,14 +119,14 @@ textarea::-webkit-input-placeholder {
 }
 
 input:-moz-placeholder,
-textarea:-moz-placeholder { /* Firefox 18- */
+textarea:-moz-placeholder { 
   font-family: @ff-primary;
   color: @clr-dark;
   font-weight: @fw-bold;
 }
 
 input::-moz-placeholder,
-textarea::-moz-placeholder {  /* Firefox 19+ */
+textarea::-moz-placeholder {  
   font-family: @ff-primary;
   color: @clr-dark;
   font-weight: @fw-bold;

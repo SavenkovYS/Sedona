@@ -29,8 +29,24 @@
 
         color: #333333;
     }
+}
 
-    &__field {
-        flex-grow: 1;
+@media(min-width: @width-tbl) {
+    .fullname {
+        padding: 0;
+        padding-left: 15px;
+       
+        border-bottom: none;
+    
+        &__title {
+            text-align: left;
+    
+            padding: 0;
+            padding-bottom: 50px;
+        }
+
+        &__item {
+            margin-bottom: 20px;
+        }
     }
 }

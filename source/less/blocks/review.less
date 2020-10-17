@@ -9,10 +9,52 @@
     }
 
     &__submit {
-        min-width: 280px;
+        width: 280px;
     }
 
     &__legend {
         display: none;
+    }
+}
+
+@media(min-width: @width-tbl) {
+    .review {
+
+        &__form-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "impression fullname"
+                "contacts   contacts"
+                "sights     sights"
+                "comment    comment";
+
+            padding: 0 60px;
+        }
+
+        &__fullname {grid-area: fullname;}
+
+        &__user-contacts {grid-area: contacts;}
+
+        &__impression {grid-area: impression;}
+
+        &__sights {grid-area: sights;}
+
+        &__comment {grid-area: comment;}
+
+        &__bottom {
+            flex-direction: row;
+            justify-content: space-between;
+    
+            padding: 60px;
+        }
+    
+        &__submit {
+            width: 320px;
+        }
+    
+        &__legend {
+            display: inline-block;
+        }
     }
 }
