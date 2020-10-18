@@ -42,6 +42,7 @@
               <p class="page-main__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
             </div>
             <section class="review">
+              <h2 class="visually-hidden">Заполните форму</h2>
               <form class="review__form" action="https://echo.htmlacademy.ru" method="get">
                 <div class="review__form-wrapper">
 
@@ -184,8 +185,40 @@
                 </svg>
               </a>
             </div>
-        </footer> <!-- / Футер -->
-      </div>
+          </footer> <!-- / Футер -->
+        </div>
+
+          <!-- Поп-апы -->
+
+        <div class="overlay">
+
+        <!-- Поп-ап ошибки -->
+
+          <section class="module-failure">
+            <h2 class="module-failure__title">Что-то пошло не так!</h2>
+            <p class="module-failure__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+            <button class="module-failure__button button">Ок</button>
+          </section>
+
+        <!-- Поп-ап отправленной формы -->
+
+          <section class="module-success">
+            <div class="module-success__top">
+              <h2 class="module-success__title">Ваш отзыв отправлен!</h2>
+              <p class="module-success__text">
+                Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+                В ближайшее время мы опубликуем его на сайте.
+              </p>
+            </div>
+            <div class="module-success__bottom">
+              <button class="module-success__button button">Закрыть окно</button>
+            </div>
+          </section>
+
+        </div>
+
+        
         <script src="js/main-nav.js"></script>
+        <script src="js/popups.js"></script>
     </body>
 </html>         
