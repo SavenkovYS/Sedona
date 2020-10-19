@@ -1,18 +1,20 @@
-.module-failure {
-    display: none;
-
+.modal-success {
     position: absolute;
-    top: 35%;
-    left: 0;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
 
     width: 100%;
-    padding: 40px 20px 35px;
 
     text-align: center;
     color: @clr-dark;
 
     background-color: @clr-light;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+    
+    &__top {
+        padding: 45px 45px 35px;
+    }
 
     &__title {
         margin-bottom: 25px;
@@ -22,9 +24,13 @@
     }
 
     &__text {
-        margin-bottom: 25px;
-
         color: #333333;
+    }
+
+    &__bottom {
+        padding: 20px;
+
+        background-color: #f2f2f2;
     }
 
     &__button {
@@ -33,14 +39,17 @@
 }
 
 @media(min-width: @width-tbl) {
-    .module-failure {
-        left: 50%;
-        transform: translateX(-50%);
+    .modal-success {
+        width: calc(100% - 120px);
+        max-width: 850px;
 
-        width: 50%;
-        max-width: 430px;
-        margin: 0 auto;
-        padding: 55px 20px 50px;
+        &__top {
+            padding: 60px 90px 35px;
+        }
+
+        &__bottom {
+            padding: 45px 90px;
+        }
     
         &__button {
             width: 100%;
@@ -49,7 +58,7 @@
 }
 
 @media(min-width: @width-dsk) {
-    .module-failure {
-        width: 35%;
+    .modal-success {
+        width: 50%;
     }
 }

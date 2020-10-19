@@ -23,8 +23,8 @@
               </a>
               <ul class="main-nav__list site-list">
                 <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
-                <li class="site-list__item"><a class="site-list__link site-list__link--active">Фото и видео</a></li>
-                <li class="site-list__item"><a class="site-list__link" href="form.html">Форма отзыва</a></li>
+                <li class="site-list__item"><a class="site-list__link" href="photo.html">Фото и видео</a></li>
+                <li class="site-list__item"><a class="site-list__link site-list__link--active">Форма отзыва</a></li>
                 <li class="site-list__item"><a class="site-list__link" href="https://htmlacademy.ru">HTML Academy</a></li>
               </ul>
 
@@ -64,7 +64,7 @@
                           <input class="fullname__field fullname__field--middlename" type="text" name="middlename" id="middlename-field" placeholder="Александрович">
                         </li>
                       </ul>
-                    </fieldset> <!-- / review__fullname-wrapper -->
+                    </fieldset> 
 
                   <!-- Поля ввода контактов пользователя -->
 
@@ -188,30 +188,30 @@
           </footer> <!-- / Футер -->
         </div>
 
-          <!-- Поп-апы -->
+        <!-- Поп-апы -->
 
         <div class="overlay">
 
         <!-- Поп-ап ошибки -->
 
-          <section class="module-failure">
-            <h2 class="module-failure__title">Что-то пошло не так!</h2>
-            <p class="module-failure__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-            <button class="module-failure__button button">Ок</button>
+          <section class="modal-failure modal">
+            <h2 class="modal-failure__title">Что-то пошло не так!</h2>
+            <p class="modal-failure__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+            <button class="modal-failure__button modal-button button">Ок</button>
           </section>
 
         <!-- Поп-ап отправленной формы -->
 
-          <section class="module-success">
-            <div class="module-success__top">
-              <h2 class="module-success__title">Ваш отзыв отправлен!</h2>
-              <p class="module-success__text">
+          <section class="modal-success modal">
+            <div class="modal-success__top">
+              <h2 class="modal-success__title">Ваш отзыв отправлен!</h2>
+              <p class="modal-success__text">
                 Спасибо за ваше участие, ваш отзыв уже поступил к нам.
                 В ближайшее время мы опубликуем его на сайте.
               </p>
             </div>
-            <div class="module-success__bottom">
-              <button class="module-success__button button">Закрыть окно</button>
+            <div class="modal-success__bottom">
+              <button class="modal-success__button modal-button button">Закрыть окно</button>
             </div>
           </section>
 

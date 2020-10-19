@@ -162,6 +162,18 @@
       &__button--subtitles {
           margin-right: 30px;
       }
+
+      &__button:hover &__icon path,
+      &__button:hover &__icon polygon,
+      &__button:focus &__icon path,
+      &__button:focus &__icon polygon {
+          fill: #000000;
+      }
+
+      &__button:active &__icon path,
+      &__button:active &__icon polygon {
+          fill: #b8b8b8;
+      }
 }
 
 @media(min-width: @width-tbl) {
@@ -232,6 +244,18 @@
 
           &__button--fullscreen {
               order: 4;
+          }
+
+          &__button:hover &__icon path,
+          &__button:hover &__icon polygon,
+          &__button:focus &__icon path,
+          &__button:focus &__icon polygon {
+              fill: rgba(255, 255, 255, 0.6);
+          }
+
+          &__button:active &__icon path,
+          &__button:active &__icon polygon {
+              fill: rgba(255, 255, 255, 0.3);
           }
     }
 }

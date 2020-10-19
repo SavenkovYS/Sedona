@@ -1,14 +1,16 @@
-.module-success {
-    display: none;
+.modal-failure {
+    position: absolute;
+    top: 30%;
+    left: 0;
+
+    width: 100%;
+    padding: 40px 20px 35px;
+
     text-align: center;
     color: @clr-dark;
 
     background-color: @clr-light;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
-    
-    &__top {
-        padding: 45px 45px 35px;
-    }
 
     &__title {
         margin-bottom: 25px;
@@ -18,13 +20,9 @@
     }
 
     &__text {
+        margin-bottom: 25px;
+
         color: #333333;
-    }
-
-    &__bottom {
-        padding: 20px;
-
-        background-color: #f2f2f2;
     }
 
     &__button {
@@ -33,18 +31,14 @@
 }
 
 @media(min-width: @width-tbl) {
-    .module-success {
-        width: calc(100% - 120px);
-        max-width: 850px;
+    .modal-failure {
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 50%;
+        max-width: 430px;
         margin: 0 auto;
-
-        &__top {
-            padding: 60px 90px 35px;
-        }
-
-        &__bottom {
-            padding: 45px 90px;
-        }
+        padding: 55px 20px 50px;
     
         &__button {
             width: 100%;
@@ -53,7 +47,7 @@
 }
 
 @media(min-width: @width-dsk) {
-    .module-success {
-        width: 50%;
+    .modal-failure {
+        width: 35%;
     }
 }

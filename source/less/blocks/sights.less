@@ -33,45 +33,15 @@
       }
     
       & input + label::before {
-        content: '';
-    
         position: absolute;
         top: -15px;
         left: -1px;
-    
-        width: 56px;
-        height: 56px;
-    
-        background-color: #f2f2f2;
-        border-radius: 5px
       } 
     
       & input:checked + label::after {
-        content: '';
-    
         position: absolute;
         top: 3px;
         left: 17px;
-    
-        width: 21px;
-        height: 13px;
-    
-        border-left: 3px solid #333333;
-        border-bottom: 3px solid #333333;
-        transform: rotate(-45deg);
-      }
-
-      & input:hover + label::before,
-      & input:focus + label::before {
-        background-color: #e5e5e5;
-      }
-    
-      & input:active + label::before {
-        background-color: #d5d5d5;
-      }
-    
-      & input:active:checked + label::after {
-        border-color: rgba(51, 51, 51, 0.3);
       }
 }
 
