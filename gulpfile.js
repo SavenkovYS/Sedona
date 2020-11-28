@@ -3,19 +3,17 @@ var less = require("gulp-less");
 var plumber = require("gulp-plumber");
 var autoprefixer = require("autoprefixer");
 var postcss = require("gulp-postcss");
-var concat = require("gulp-concat");
 var minify = require ("gulp-csso");
 var rename = require ("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
-var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 var server = require("browser-sync").create();
 
 gulp.task("style", function() {
-  return gulp.src("source/less/style.less")
+  return gulp.src("docs/less/style.less")
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
@@ -29,7 +27,7 @@ gulp.task("style", function() {
 });
 
 gulp.task("images", function () {
-   return gulp.src("source/img/**/*.{png,jpg,svg}")
+   return gulp.src("docs/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
         imagemin.optipng({optimizationlevel: 3}),
         imagemin.mozjpeg({progressive: true}),
@@ -39,19 +37,11 @@ gulp.task("images", function () {
 });
 
 gulp.task('webp', () =>
-    gulp.src('source/img/**/*.{png,jpg}')
+    gulp.src('docs/img/**/*.{png,jpg}')
         .pipe(webp({quality: 90}))
         .pipe(gulp.dest('build/img'))
 );
 
-gulp.task("sprite", function () {
-    return gulp.src("source/img/icon-*.svg")
-      .pipe(svgstore({
-        inlineSvg: true
-    }))
-      .pipe(rename("sprite.svg"))
-      .pipe(gulp.dest("build/img"));
-});
 
 gulp.task("html", function () {
     return gulp.src("source/*.html")
