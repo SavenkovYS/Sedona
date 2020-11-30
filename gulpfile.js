@@ -44,7 +44,7 @@ gulp.task('webp', () =>
 
 
 gulp.task("html", function () {
-    return gulp.src("source/*.html")
+    return gulp.src("docs/*.html")
       .pipe(posthtml([
         include()
     ]))
@@ -54,12 +54,12 @@ gulp.task("html", function () {
 
 gulp.task("copy", function() {
   return gulp.src([
-      "source/fonts/**/*.{woff,woff2}",
-      "source/img/**",
-      "source/js/**",
-      "source/css/normalize.css"
+      "docs/fonts/**/*.{woff,woff2}",
+      "docs/img/**",
+      "docs/js/**",
+      "docs/css/normalize.css"
     ], {
-      base: "source"
+      base: "docs"
     })
     .pipe(gulp.dest("build"));
 });
@@ -90,13 +90,13 @@ gulp.task("browserSync", function(done) {
 });
 
 gulp.task("serve", function() {
-  gulp.watch("source/less/**/*.less", gulp.series("style"));
-  gulp.watch("source/*.html").on("change", gulp.series("html:copy", server.reload));
-  gulp.watch("source/**/*.js").on("change", gulp.series("js:copy", server.reload));
+  gulp.watch("docs/less/**/*.less", gulp.series("style"));
+  gulp.watch("docs/*.html").on("change", gulp.series("html:copy", server.reload));
+  gulp.watch("docs/**/*.js").on("change", gulp.series("js:copy", server.reload));
 });
 
 
-var build = gulp.series("clean", "copy", "style", "webp", "images", "sprite", "html");
+var build = gulp.series("clean", "copy", "style", "webp", "images", "html");
 
 var watch = gulp.parallel("serve", "browserSync");
 

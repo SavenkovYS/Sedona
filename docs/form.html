@@ -53,15 +53,15 @@
                       <ul class="fullname__list">
                         <li class="fullname__item">
                           <label class="fullname__label" for="name-field">Имя*:</label>
-                          <input class="fullname__field fullname__field--name" type="text" name="name" id="name-field" placeholder="Петр">
+                          <input class="fullname__field fullname__field--name text-input" type="text" name="name" id="name-field" placeholder="Петр">
                         </li>
                         <li class="fullname__item">
                           <label class="fullname__label" for="surname-field">Фамилия*:</label>
-                          <input class="fullname__field fullname__field--surname" type="text" name="surname" id="surname-field" placeholder="Иванов">
+                          <input class="fullname__field fullname__field--surname text-input" type="text" name="surname" id="surname-field" placeholder="Иванов">
                         </li>
                         <li class="fullname__item">
                           <label class="fullname__label" for="middlename-field">Отчество:</label>
-                          <input class="fullname__field fullname__field--middlename" type="text" name="middlename" id="middlename-field" placeholder="Александрович">
+                          <input class="fullname__field fullname__field--middlename text-input" type="text" name="middlename" id="middlename-field" placeholder="Александрович">
                         </li>
                       </ul>
                     </fieldset> 
@@ -73,11 +73,11 @@
                     <ul class="user-contacts__list">
                       <li class="user-contacts__item user-contacts__item--phone">
                         <label class="user-contacts__label" for="phone-field"><span>Контактный</span> телефон*:</label>
-                        <input class="user-contacts__field user-contacts__field--phone" type="tel" name="phone" id="phone-field" placeholder="Введите телефон">
+                        <input class="user-contacts__field user-contacts__field--phone text-input" type="tel" name="phone" id="phone-field" placeholder="Введите телефон">
                       </li>
                       <li class="user-contacts__item user-contacts__item--mail">
                         <label class="user-contacts__label" for="mail-field">Электронная почта*:</label>
-                        <input class="user-contacts__field user-contacts__field--mail" type="email" name="mail" id="mail-field" placeholder="Введите e-mail">
+                        <input class="user-contacts__field user-contacts__field--mail text-input" type="email" name="mail" id="mail-field" placeholder="Введите e-mail">
                       </li>
                     </ul>
                   </fieldset>
@@ -88,15 +88,15 @@
                     <legend class="impression__title">Ваше общее впечатление:</legend>
                     <ul class="impression__list">
                       <li class="impression__item">
-                        <input class="impression__field visually-hidden" type="radio" name="impression" value="positive" id="positive-field" checked>
+                        <input class="impression__field visually-hidden radio-button" type="radio" name="impression" value="positive" id="positive-field" checked>
                         <label class="impression__label" for="positive-field">Скорее положительное</label>
                       </li>
                       <li class="impression__item">
-                        <input class="impression__field visually-hidden" type="radio" name="impression" value="negative" id="negative-field">
+                        <input class="impression__field visually-hidden radio-button" type="radio" name="impression" value="negative" id="negative-field">
                         <label class="impression__label" for="negative-field">Скорее отрицательное</label>
                       </li>
                       <li class="impression__item">
-                        <input class="impression__field visually-hidden" type="radio" name="impression" value="hardtosay" id="hardtosay-field">
+                        <input class="impression__field visually-hidden radio-button" type="radio" name="impression" value="hardtosay" id="hardtosay-field">
                         <label class="impression__label" for="hardtosay-field">Затрудняюсь ответить</label>
                       </li>
                     </ul>
@@ -108,19 +108,19 @@
                     <legend class="sights__title">Посещенные достопримечательности:</legend>
                     <ul class="sights__list">
                       <li class="sights__item">
-                        <input class="sights__field visually-hidden" type="checkbox" name="Devil's bridge" id="bridge-field" checked>
+                        <input class="sights__field visually-hidden checkbox" type="checkbox" name="Devil's bridge" id="bridge-field" checked>
                         <label class="sights__label" for="bridge-field">Мост Дьявола</label>
                       </li>
                       <li class="sights__item">
-                        <input class="sights__field visually-hidden" type="checkbox" name="Bell Mountain" id="mountain-field" checked>
+                        <input class="sights__field visually-hidden checkbox" type="checkbox" name="Bell Mountain" id="mountain-field" checked>
                         <label class="sights__label" for="mountain-field">Гора-Колокол</label>
                       </li>
                       <li class="sights__item">
-                        <input class="sights__field visually-hidden" type="checkbox" name="Slide-Park" id="park-field" checked>
+                        <input class="sights__field visually-hidden checkbox" type="checkbox" name="Slide-Park" id="park-field" checked>
                         <label class="sights__label" for="park-field">Слайд-парк</label>
                       </li>
                       <li class="sights__item">
-                        <input class="sights__field visually-hidden" type="checkbox" name="Red Cliffs" id="cliffs-field">
+                        <input class="sights__field visually-hidden checkbox" type="checkbox" name="Red Cliffs" id="cliffs-field">
                         <label class="sights__label" for="cliffs-field">Красные скалы</label>
                       </li>
                     </ul>
@@ -130,7 +130,7 @@
 
                   <fieldset class="review__comment comment">
                     <legend class="comment__title">Опишите свои эмоции:</legend>
-                    <textarea class="comment__field" name="comment__field" placeholder="Опишите подробно все свои восторги"></textarea>
+                    <textarea class="comment__field" name="comment__field text-input" placeholder="Опишите подробно все свои восторги"></textarea>
                   </fieldset>            
 
                 </div> <!-- / review__form-wrapper -->
