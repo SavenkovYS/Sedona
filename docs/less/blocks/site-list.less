@@ -30,16 +30,17 @@
         color: inherit;
 
         text-decoration: none;
+        transition: all 0.2s ease-out;
     }
 
 // Сосояние кнопок меню
 
-    &__link:hover,
-    &__link:focus {
+    &__link[href]:hover,
+    &__link[href]:focus {
         background-color: @clr-bg-hvr;
     }
 
-    &__link:active {
+    &__link[href]:active {
         color: @clr-light-act;
 
         background-color: @clr-bg-act;
@@ -81,29 +82,29 @@
 
 // Сосояние кнопок меню
 
-        &__link:hover,
-        &__link:focus {
+        &__link[href]:hover,
+        &__link[href]:focus {
             color: @clr-accent;
 
             background-color: transparent;
         }
 
-        &__link:focus {
+        &__link[href]:focus {
             outline: 3px solid @clr-accent
         }
 
-        &__link:active {
+        &__link[href]:active {
             color: @clr-dark-act;
 
             background-color: transparent;        
         }
 
-        &__link--active:hover,
-        &__link--active:focus {
+        &__link--active[href]:hover,
+        &__link--active[href]:focus {
             color: #604e43;
         }
 
-        &__link--active:active {
+        &__link--active[href]:active {
             color: rgba(118, 99, 87, 0.3);       
         }
     }
