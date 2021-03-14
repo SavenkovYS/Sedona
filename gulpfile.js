@@ -82,7 +82,7 @@ gulp.task("clean", function () {
 gulp.task("browserSync", function(done) {
   server.init({
     server: {
-      baseDir: "build/"
+      baseDir: "src/"
     },
     port: 3000
   });
