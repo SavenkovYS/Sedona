@@ -1,25 +1,43 @@
-let flag = 0
+function mapInit() {
+    let flag = 0
+    const LOADING_OFFSET = 500
 
-window.addEventListener('scroll', () => {
-    let scrollY = window.scrollY
-    let mapOffset = document.querySelector('#map').offsetTop
+    function showMap() {
+        const scrollY = window.scrollY
+        const mapOffset = document.querySelector('#map').getBoundingClientRect().top
 
-    if ((scrollY >= mapOffset - 500) && (flag === 0)) {
-        ymaps.ready(init);
-        function init(){
-            // Создание карты.
-            var myMap = new ymaps.Map("map", {
-                // Координаты центра карты.
-                // Порядок по умолчанию: «широта, долгота».
-                // Чтобы не определять координаты центра карты вручную,
-                // воспользуйтесь инструментом Определение координат.
-                center: [55.76, 37.64],
-                // Уровень масштабирования. Допустимые значения:
-                // от 0 (весь мир) до 19.
-                zoom: 7
-            });
+        if ((scrollY >= mapOffset - LOADING_OFFSET) && (flag === 0)) {
+            ymaps.ready(init);
+            function init() {
+                const myMap = new ymaps.Map("map", {
+
+                    center: [34.869497, -111.760186],
+
+                    zoom: 10
+                });
+
+                myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                    hintContent: 'Седона'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: '../img/map-marker.png',
+                    iconImageSize: [27, 27],
+                    iconImageOffset: [-12, -20]
+                })
+
+                myMap.geoObjects
+                    .add(myPlacemark)
+            }
+
+            flag = 1
         }
-
-        flag = 1
     }
-})
+
+    showMap()
+
+    window.addEventListener('scroll', () => {
+        showMap()
+    })
+}
+
+mapInit()
