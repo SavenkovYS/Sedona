@@ -103,7 +103,7 @@ gulp.task("serve", function() {
 });
 
 
-var build = gulp.series("clean", "copy", "style", "compress", "webp", "images", "html");
+var build = gulp.series("clean", "copy", "style", "compress", "images", "html");
 
 var watch = gulp.parallel("serve", "browserSync");
 

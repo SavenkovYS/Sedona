@@ -20,7 +20,7 @@ function mapInit() {
                     hintContent: 'Седона'
                 }, {
                     iconLayout: 'default#image',
-                    iconImageHref: '../img/map-marker.png',
+                    iconImageHref: '/projects/Sedona/img/map-marker.png',
                     iconImageSize: [27, 27],
                     iconImageOffset: [-12, -20]
                 })
